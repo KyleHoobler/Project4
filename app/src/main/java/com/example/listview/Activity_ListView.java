@@ -10,9 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class Activity_ListView extends AppCompatActivity {
 
+    private ConnectivityCheck connect;
+    private DownloadTask myTask;
 	private SharedPreferences myPreference;
 	private SharedPreferences.OnSharedPreferenceChangeListener listener;
 	ListView my_listview;
@@ -41,7 +44,7 @@ public class Activity_ListView extends AppCompatActivity {
         //updates when prefrences change
         myPreference.registerOnSharedPreferenceChangeListener(listener);
 
-
+        checkConnection();
 
 		//listview that you will operate on
 		my_listview = (ListView)findViewById(R.id.lv);
@@ -59,6 +62,33 @@ public class Activity_ListView extends AppCompatActivity {
 		//TODO call a thread to get the JSON list of bikes
 		//TODO when it returns it should process this data with bindData
 	}
+
+    public void checkConnection(){
+
+        connect = new ConnectivityCheck();
+
+        if(connect.isNetworkReachable(this)){
+            runDownloadTask();
+        }
+        else{
+            Toast.makeText(this,"Could not connect to the Network", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void printValue(String s){
+        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+    }
+
+    public void runDownloadTask(){
+        if(myTask != null){
+            myTask.detach();
+            myTask= null;
+        }
+
+        myTask = new DownloadTask(this);
+
+        myTask.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/pets/pets.json"));
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
