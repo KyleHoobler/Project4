@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <ListPreference android:title="Info"
+            android:key ="listpref"
+            android:summary="Select which site to get JSON data from"
+            android:defaultValue="http://www.tetonsoftware.com/bikes/bikes.json"
+            android:entries="@array/webOptions"
+            android:entryValues="@array/values">
+        </ListPreference>
+
+</PreferenceScreen>

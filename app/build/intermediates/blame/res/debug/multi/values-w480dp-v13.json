@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w480dp-v13\\values-w480dp-v13.xml",
+        "outputFile": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w480dp-v13\\values-w480dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 112
                 },
                 "from": {
-                    "file": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\values-w480dp\\values-w480dp.xml",
+                    "file": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\values-w480dp\\values-w480dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 184
                 },
                 "from": {
-                    "file": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\values-w480dp\\values-w480dp.xml",
+                    "file": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\values-w480dp\\values-w480dp.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,

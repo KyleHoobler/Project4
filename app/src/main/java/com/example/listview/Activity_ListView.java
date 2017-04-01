@@ -1,6 +1,9 @@
 package com.example.listview;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -10,7 +13,8 @@ import android.widget.Spinner;
 
 public class Activity_ListView extends AppCompatActivity {
 
-
+	private SharedPreferences myPreference;
+	private SharedPreferences.OnSharedPreferenceChangeListener listener;
 	ListView my_listview;
 
 	@Override
@@ -20,6 +24,24 @@ public class Activity_ListView extends AppCompatActivity {
 
 		// Change title to indicate sort by
 		setTitle("Sort by:");
+
+
+
+        myPreference = PreferenceManager.getDefaultSharedPreferences(this);
+
+        //On Update prefrences
+        listener = new SharedPreferences.OnSharedPreferenceChangeListener(){
+            public void onSharedPreferenceChanged(SharedPreferences prefs, String key){
+                if(key.equals("listpref")){
+
+
+                }
+            }
+        };
+        //updates when prefrences change
+        myPreference.registerOnSharedPreferenceChangeListener(listener);
+
+
 
 		//listview that you will operate on
 		my_listview = (ListView)findViewById(R.id.lv);
@@ -37,6 +59,22 @@ public class Activity_ListView extends AppCompatActivity {
 		//TODO call a thread to get the JSON list of bikes
 		//TODO when it returns it should process this data with bindData
 	}
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //switches between the options
+        switch(item.getItemId()){
+            case(R.id.action_settings):
+                //starts new preference activity
+                Intent myIntent = new Intent(this, activityPreference.class);
+                startActivity(myIntent);
+                break;
+            default:
+                break;
+
+        }
+        return true;
+    }
 
 	private void setupListViewOnClickListener() {
 		//TODO you want to call my_listviews setOnItemClickListener with a new instance of android.widget.AdapterView.OnItemClickListener() {
@@ -71,13 +109,4 @@ public class Activity_ListView extends AppCompatActivity {
 		return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-
-		default:
-			break;
-		}
-		return true;
-	}
 }

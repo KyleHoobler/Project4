@@ -1,42 +1,42 @@
 [
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_fade_out.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_popup_enter.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_popup_exit.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_fade_in.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\anim\\abc_slide_in_top.xml"
     }
 ]
