@@ -18,7 +18,7 @@ public class BikeData {
      */
     @Override
     public String toString() {
-        // TODO figure out how to print all bikedata out for dialogs
+
         return "TODO";
     }
 
@@ -53,7 +53,7 @@ public class BikeData {
         // notice it returns this bulder
         // makes it suitable for chaining
         Builder setDescription(String Description) {
-            //TODO manage this
+            this.Description = Description;
             return this;
         }
 
@@ -75,6 +75,10 @@ public class BikeData {
         Builder setLink(String Link) {
 
             return this;
+        }
+
+        public String getCompany(){
+            return Company;
         }
 
         // use this to actually construct Bikedata
