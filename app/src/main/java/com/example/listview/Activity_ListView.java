@@ -12,6 +12,10 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
+import java.io.IOException;
+
 public class Activity_ListView extends AppCompatActivity {
 
     private ConnectivityCheck connect;
@@ -77,6 +81,18 @@ public class Activity_ListView extends AppCompatActivity {
 
     public void printValue(String s){
         Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+
+        
+    }
+
+
+    public void processJson(String json){
+        try {
+            JSONObject jsonObject = new JSONObject(json);
+        }
+        catch (Exception e){
+
+        }
     }
 
     public void runDownloadTask(){
