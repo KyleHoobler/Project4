@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-v13\\values-h320dp-v13.xml",
+        "outputFile": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-v13\\values-h320dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\taylo\\.android\\build-cache\\354101335780ffb6af01e3b225bbd52d14a5373e\\output\\res\\values-h320dp\\values-h320dp.xml",
+                    "file": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\values-h320dp\\values-h320dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
