@@ -82,7 +82,7 @@ public class Activity_ListView extends AppCompatActivity {
     public void printValue(String s){
         Toast.makeText(this, s, Toast.LENGTH_LONG).show();
 
-        
+
     }
 
 
