@@ -16,11 +16,19 @@ public class Activity_ListView extends AppCompatActivity {
 	private SharedPreferences myPreference;
 	private SharedPreferences.OnSharedPreferenceChangeListener listener;
 	ListView my_listview;
+    String[] tmp;
+    Integer[] imageid;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+
+        imageid = new Integer[5];
+        tmp = new String[5];
+		myAdapter adapter = new myAdapter(Activity_ListView.this, tmp, imageid);
+
 
 		// Change title to indicate sort by
 		setTitle("Sort by:");
