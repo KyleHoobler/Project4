@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string-array name="values">
+        <item>http://www.tetonsoftware.com/bikes/bikes.json</item>
+        <item>http://www.pcs.cnu.edu/~kperkins/bikes/bikes.json</item>
+    </string-array>
+
+    <string-array name="webOptions">
+        <item>Teton Software - Bikes</item>
+        <item>CNU-Defender</item>
+    </string-array>
+
     <string-array name="sortable_fields">
         <item>Company</item>
          <item>Model</item>

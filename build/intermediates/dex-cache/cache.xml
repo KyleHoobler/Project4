@@ -3,39 +3,39 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Kyle\.android\build-cache\1ff1c830efad7b4d8c5a5810f726d3e878bddbd3\output\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Users\Kyle\Desktop\craiglist\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_2df2a38cde239558358e8a29945fdcc88933b6c0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Kyle\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jar="C:\Users\taylo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Users\Kyle\Desktop\craiglist\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_fd956e8e2b5e672d2d25060b59dc317280d8eede.jar" />
+        <dex dex="C:\Users\taylo\AndroidStudioProjects\Project4\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_c6bb44770a79c194a09f90e2fce3e01c94a1d828.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Kyle\.android\build-cache\1ff1c830efad7b4d8c5a5810f726d3e878bddbd3\output\jars\classes.jar"
+        jar="C:\Users\taylo\.android\build-cache\d3ff176dc10eeac237f695f27943dcb50e9cfeb6\output\jars\libs\internal_impl-23.1.1.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Users\Kyle\Desktop\craiglist\app\build\intermediates\pre-dexed\debug\classes_a17c8b269dd9e916fc4efb1f924f3b50658b6dbb.jar" />
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\taylo\AndroidStudioProjects\Project4\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_0b2a8b49d8747b1e9a7cdd1b9ee8005954b0b8ef.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Kyle\.android\build-cache\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\output\jars\classes.jar"
+        jar="C:\Users\taylo\.android\build-cache\354101335780ffb6af01e3b225bbd52d14a5373e\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Users\Kyle\Desktop\craiglist\app\build\intermediates\pre-dexed\debug\classes_f95bae83c7ed3dd882861136cdb8d6aacb236220.jar" />
+        <dex dex="C:\Users\taylo\AndroidStudioProjects\Project4\app\build\intermediates\pre-dexed\debug\classes_2fd8d51f2f10cae7ddf017ddb08917a23ce999fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\taylo\.android\build-cache\d3ff176dc10eeac237f695f27943dcb50e9cfeb6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\taylo\AndroidStudioProjects\Project4\app\build\intermediates\pre-dexed\debug\classes_85249e189c1a7c3c0f0946c428c84309976e3f61.jar" />
     </item>
 
 </items>
