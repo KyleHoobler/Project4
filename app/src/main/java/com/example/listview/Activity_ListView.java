@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -97,16 +99,6 @@ public class Activity_ListView extends AppCompatActivity {
 
     }
 
-
-    public void processJson(String json){
-        try {
-            JSONObject jsonObject = new JSONObject(json);
-        }
-        catch (Exception e){
-
-        }
-    }
-
     public void runDownloadTask(){
         if(myTask != null){
             myTask.detach();
@@ -162,9 +154,22 @@ public class Activity_ListView extends AppCompatActivity {
         tmp = new String[] {"Company", "Price", "Model", "Location", "Date"};
         spinner = (Spinner)findViewById(R.id.spinner);
 
- 
-
         spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, tmp));
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                printValue("Hi Dad");
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
 	}
 	@Override
