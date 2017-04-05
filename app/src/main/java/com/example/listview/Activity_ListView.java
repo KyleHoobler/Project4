@@ -15,6 +15,8 @@ import android.widget.Toast;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Activity_ListView extends AppCompatActivity {
 
@@ -22,6 +24,7 @@ public class Activity_ListView extends AppCompatActivity {
     private DownloadTask myTask;
 	private SharedPreferences myPreference;
 	private SharedPreferences.OnSharedPreferenceChangeListener listener;
+    private List<BikeData> imList;
 	ListView my_listview;
     String[] tmp;
     Integer[] imageid;
@@ -162,5 +165,12 @@ public class Activity_ListView extends AppCompatActivity {
 		getMenuInflater().inflate(R.menu.menu, menu);
 		return true;
 	}
+    public void setList(List<BikeData> list){
+        imList = new ArrayList<BikeData>();
+        imList.addAll(list);
+        for(int i = 0; i < imList.size(); i++){
+           Toast.makeText( this, imList.get(i) + "",Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
