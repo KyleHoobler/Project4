@@ -10,7 +10,10 @@ public class BikeData {
     public static final int MODEL = 1;
     public static final int PRICE = 2;
     public static final int LOCATION = 3;
-
+    final String Company;
+    final String Model;
+    final double Price;
+    final String Location;
     //TODO make all BikeData fields final
 
     /* (non-Javadoc)
@@ -19,11 +22,14 @@ public class BikeData {
     @Override
     public String toString() {
 
-        return "TODO";
+        return Model;
     }
 
     private BikeData(Builder b) {
-        //TODO
+        this.Company = b.Company;
+        this.Model = b.Model;
+        this.Price = b.Price;
+        this.Location = b.Location;
     }
 
     /**
@@ -58,22 +64,22 @@ public class BikeData {
         }
 
         Builder setLocation(String Location) {
-
+            this.Location = Location;
             return this;
         }
 
         Builder setDate(String Date) {
-
+            this.Date = Date;
             return this;
         }
 
         Builder setPicture(String Picture) {
-
+            this.Picture = Picture;
             return this;
         }
 
         Builder setLink(String Link) {
-
+            this.Link = Link;
             return this;
         }
 
