@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -36,8 +37,8 @@ public class Activity_ListView extends AppCompatActivity {
 
 
         imageid = new Integer[5];
-        tmp = new String[5];
-		myAdapter adapter = new myAdapter(Activity_ListView.this, tmp, imageid);
+
+
 
 
 		// Change title to indicate sort by
@@ -157,6 +158,13 @@ public class Activity_ListView extends AppCompatActivity {
 	 * dontforget to bind the listener to the spinner with setOnItemSelectedListener!
 	 */
 	private void setupSimpleSpinner() {
+
+        tmp = new String[] {"Company", "Price", "Model", "Location", "Date"};
+        spinner = (Spinner)findViewById(R.id.spinner);
+
+ 
+
+        spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, tmp));
 
 	}
 	@Override
