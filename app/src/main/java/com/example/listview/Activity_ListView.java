@@ -151,7 +151,7 @@ public class Activity_ListView extends AppCompatActivity {
 	 */
 	private void setupSimpleSpinner() {
 
-        tmp = new String[] {"Company", "Price", "Model", "Location", "Date"};
+        tmp = new String[] {"Company","Model", "Price", "Location"};
         spinner = (Spinner)findViewById(R.id.spinner);
 
         spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, tmp));
