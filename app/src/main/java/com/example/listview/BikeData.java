@@ -25,7 +25,6 @@ public class BikeData {
     @Override
     public String toString() {
 
-
         return "Company: " + Company + "\nModel: " + Model + "\nPrice: $" + Price + "\nLocation: " + Location + "\nDate Listed: " + Date + "\nDescription: " + Description + "\nLink: " + Link;
     }
 

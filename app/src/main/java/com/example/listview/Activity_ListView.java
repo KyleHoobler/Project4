@@ -65,7 +65,7 @@ public class Activity_ListView extends AppCompatActivity {
         checkConnection();
 
 		//listview that you will operate on
-		my_listview = (ListView)findViewById(R.id.lv);
+		//my_listview = (ListView)findViewById(R.id.lv);
 
 		//toolbar
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -121,12 +121,12 @@ public class Activity_ListView extends AppCompatActivity {
                 //starts new preference activity
                 Intent myIntent = new Intent(this, activityPreference.class);
                 startActivity(myIntent);
-                break;
+                return true;
             default:
                 break;
 
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 
 	private void setupListViewOnClickListener() {
@@ -189,9 +189,9 @@ public class Activity_ListView extends AppCompatActivity {
     public void setList(List<BikeData> list){
         imList = new ArrayList<BikeData>();
         imList.addAll(list);
-        for(int i = 0; i < imList.size(); i++){
-           Toast.makeText( this, imList.get(i) + "",Toast.LENGTH_SHORT).show();
-        }
+        //for(int i = 0; i < imList.size(); i++){
+          // Toast.makeText( this, imList.get(i) + "",Toast.LENGTH_SHORT).show();
+        //}
     }
 
 }
