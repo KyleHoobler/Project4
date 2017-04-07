@@ -1746,9 +1746,10 @@ containing a value of this type.
         public static final int bike=0x7f020047;
         public static final int bike3=0x7f020048;
         public static final int generic=0x7f020049;
-        public static final int ic_launcher=0x7f02004a;
-        public static final int ic_launcher2=0x7f02004b;
-        public static final int notification_template_icon_bg=0x7f02004c;
+        public static final int ic_action_name=0x7f02004a;
+        public static final int ic_launcher=0x7f02004b;
+        public static final int ic_launcher2=0x7f02004c;
+        public static final int notification_template_icon_bg=0x7f02004d;
     }
     public static final class id {
         public static final int Description=0x7f0d0056;
@@ -1812,6 +1813,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0d0005;
         public static final int progress_horizontal=0x7f0d0006;
         public static final int radio=0x7f0d003b;
+        public static final int refresh=0x7f0d0065;
         public static final int screen=0x7f0d0014;
         public static final int scrollIndicatorDown=0x7f0d0035;
         public static final int scrollIndicatorUp=0x7f0d0032;

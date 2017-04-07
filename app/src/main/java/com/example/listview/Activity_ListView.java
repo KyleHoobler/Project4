@@ -122,6 +122,12 @@ public class Activity_ListView extends AppCompatActivity {
                 Intent myIntent = new Intent(this, activityPreference.class);
                 startActivity(myIntent);
                 return true;
+
+            case(R.id.refresh):
+                refresh();
+
+
+
             default:
                 break;
 
@@ -162,7 +168,7 @@ public class Activity_ListView extends AppCompatActivity {
         tmp = new String[] {"Company","Model", "Price", "Location"};
         spinner = (Spinner)findViewById(R.id.spinner);
 
-        spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, tmp));
+        spinner.setAdapter(new ArrayAdapter<String>(this, R.layout.spinner_item, tmp));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
 
@@ -190,8 +196,13 @@ public class Activity_ListView extends AppCompatActivity {
         imList = new ArrayList<BikeData>();
         imList.addAll(list);
         //for(int i = 0; i < imList.size(); i++){
-          // Toast.makeText( this, imList.get(i) + "",Toast.LENGTH_SHORT).show();
-        //}
+         // Toast.makeText( this, imList.get(i) + "",Toast.LENGTH_SHORT).show();
+       // }
+    }
+
+    public void refresh(){
+        imList.removeAll(imList);
+        runDownloadTask();
     }
 
 }

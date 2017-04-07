@@ -592,9 +592,10 @@ int drawable action_settings_dark 0x7f020046
 int drawable bike 0x7f020047
 int drawable bike3 0x7f020048
 int drawable generic 0x7f020049
-int drawable ic_launcher 0x7f02004a
-int drawable ic_launcher2 0x7f02004b
-int drawable notification_template_icon_bg 0x7f02004c
+int drawable ic_action_name 0x7f02004a
+int drawable ic_launcher 0x7f02004b
+int drawable ic_launcher2 0x7f02004c
+int drawable notification_template_icon_bg 0x7f02004d
 int id Description 0x7f0d0056
 int id Model 0x7f0d0054
 int id Price 0x7f0d0055
@@ -656,6 +657,7 @@ int id parentPanel 0x7f0d002d
 int id progress_circular 0x7f0d0005
 int id progress_horizontal 0x7f0d0006
 int id radio 0x7f0d003b
+int id refresh 0x7f0d0065
 int id screen 0x7f0d0014
 int id scrollIndicatorDown 0x7f0d0035
 int id scrollIndicatorUp 0x7f0d0032
