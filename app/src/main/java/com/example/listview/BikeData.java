@@ -16,6 +16,7 @@ public class BikeData {
     final String Location;
     final String Date;
     final String Description;
+    final String picture;
     final String Link;
     //TODO make all BikeData fields final
 
@@ -36,6 +37,7 @@ public class BikeData {
         this.Date = b.Date;
         this.Description = b.Description;
         this.Link = b.Link;
+        this.picture = b.Picture;
     }
     public String getCompany(){
         return Company;
