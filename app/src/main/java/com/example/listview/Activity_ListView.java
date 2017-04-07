@@ -1,9 +1,11 @@
 package com.example.listview;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -69,13 +71,16 @@ public class Activity_ListView extends AppCompatActivity {
 
 		//toolbar
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
 		setSupportActionBar(toolbar);
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
 		setupSimpleSpinner();
 
 		//set the listview onclick listener
-		setupListViewOnClickListener();
+        my_listview = (ListView)findViewById(R.id.lv);
+        setupListViewOnClickListener();
+
 
 		//TODO call a thread to get the JSON list of bikes
 		//TODO when it returns it should process this data with bindData
@@ -135,9 +140,23 @@ public class Activity_ListView extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-	private void setupListViewOnClickListener() {
-		//TODO you want to call my_listviews setOnItemClickListener with a new instance of android.widget.AdapterView.OnItemClickListener() {
-	}
+    private void setupListViewOnClickListener() {
+        my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(Activity_ListView.this);
+                builder.setMessage(imList.get(position) + "");
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+    }
 
 	/**
 	 * Takes the string of bikes, parses it using JSONHelper
