@@ -21,7 +21,7 @@ public class listAdapter extends ArrayAdapter<BikeData> {
 
 
     public listAdapter(Context context, List<BikeData> data ){
-        super(context, R.layout.listview_row_layout,data);
+        super(context, R.layout.listview_row_layout, data);
         this.context = context;
         this.myBikes = data;
     }
@@ -37,10 +37,10 @@ public class listAdapter extends ArrayAdapter<BikeData> {
         BikeData currentBike = myBikes.get(position);
 
         ImageView imageView = (ImageView) tmp.findViewById(R.id.imageView1);
-        ///Set the image
+        //DownloadImageTask.execute();
 
         TextView price = (TextView) tmp.findViewById(R.id.Price);
-        price.setText(currentBike.Price +"");
+        price.setText(currentBike.Price + "");
 
         TextView description = (TextView) tmp.findViewById(R.id.Description);
         description.setText(currentBike.Description);
@@ -51,4 +51,8 @@ public class listAdapter extends ArrayAdapter<BikeData> {
 
         return tmp;
     }
+
+
+
+
 }
