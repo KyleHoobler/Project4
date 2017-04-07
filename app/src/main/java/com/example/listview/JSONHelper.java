@@ -63,6 +63,7 @@ public class JSONHelper {
                         .setDescription(rec.getString(DESCRIPTION))
                         .setPicture(rec.getString(PICTURE))
                         .setLink(rec.getString(LINK));
+
                 myList.add(myDataBuilder.build());
             }
 
