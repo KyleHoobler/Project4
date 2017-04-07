@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -15,11 +17,13 @@ import java.util.List;
 public class listAdapter extends ArrayAdapter<BikeData> {
 
     Context context;
+    List<BikeData> myBikes;
 
 
     public listAdapter(Context context, List<BikeData> data ){
         super(context, R.layout.listview_row_layout,data);
         this.context = context;
+        this.myBikes = data;
     }
 
     @Override
@@ -30,7 +34,21 @@ public class listAdapter extends ArrayAdapter<BikeData> {
             tmp = inflater.inflate(R.layout.listview_row_layout,parent,false);
         }
 
+        BikeData currentBike = myBikes.get(position);
 
-        return super.getView(position, counterView, parent);
+        ImageView imageView = (ImageView) tmp.findViewById(R.id.imageView1);
+        ///Set the image
+
+        TextView price = (TextView) tmp.findViewById(R.id.Price);
+        price.setText(currentBike.Price +"");
+
+        TextView description = (TextView) tmp.findViewById(R.id.Description);
+        description.setText(currentBike.Description);
+
+        TextView model = (TextView) tmp.findViewById(R.id.Model);
+        model.setText(currentBike.Model);
+
+
+        return tmp;
     }
 }

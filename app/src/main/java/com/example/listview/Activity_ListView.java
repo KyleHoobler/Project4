@@ -109,6 +109,8 @@ public class Activity_ListView extends AppCompatActivity {
         myTask = new DownloadTask(this);
 
         myTask.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/pets/pets.json"));
+
+
     }
 
     @Override
@@ -138,10 +140,13 @@ public class Activity_ListView extends AppCompatActivity {
 	 *
 	 * @param JSONString  complete string of all bikes
 	 */
-	private void bindData(String JSONString) {
+	public void bindData(String JSONString) {
+        setList(JSONHelper.parseAll(JSONString));
         ListView listView = (ListView)findViewById(R.id.lv);
         ArrayAdapter<BikeData> adapter = new listAdapter(this,imList);
+        listView.setAdapter(adapter);
 	}
+
 
 
 	Spinner spinner;

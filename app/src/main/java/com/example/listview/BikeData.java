@@ -14,6 +14,7 @@ public class BikeData {
     final String Model;
     final double Price;
     final String Location;
+    final String Description;
     //TODO make all BikeData fields final
 
     /* (non-Javadoc)
@@ -30,6 +31,7 @@ public class BikeData {
         this.Model = b.Model;
         this.Price = b.Price;
         this.Location = b.Location;
+        this.Description = b.Description;
     }
 
     /**
@@ -82,6 +84,20 @@ public class BikeData {
             this.Link = Link;
             return this;
         }
+        public String getDesc(){
+            return  this.Description;
+        }
+        public String getPicture(){
+            return this.Picture;
+        }
+        public String getModel(){
+            return this.Model;
+        }
+        public Double getPrice(){
+            return this.Price;
+        }
+
+
 
         public String getCompany(){
             return Company;
