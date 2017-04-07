@@ -27,28 +27,46 @@ public class listAdapter extends ArrayAdapter<BikeData> {
     }
 
     @Override
-    public View getView(int position, View counterView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent){
+        ViewHolder holder;
+
         LayoutInflater inflater = LayoutInflater.from(context);
-        View tmp = counterView;
-        if(tmp == null){
-            tmp = inflater.inflate(R.layout.listview_row_layout,parent,false);
+        if(convertView == null){
+            convertView = inflater.inflate(R.layout.listview_row_layout,null);
+
+            holder = new ViewHolder();
+            holder.price = (TextView) convertView.findViewById(R.id.Price);
+            holder.description = (TextView) convertView.findViewById(R.id.Description);
+            holder.model = (TextView) convertView.findViewById(R.id.Model);
+
+            convertView.setTag(holder);
+        }
+
+        else{
+            holder = (ViewHolder) convertView.getTag();
         }
 
         BikeData currentBike = myBikes.get(position);
 
-        ImageView imageView = (ImageView) tmp.findViewById(R.id.imageView1);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView1);
         ///Set the image
 
-        TextView price = (TextView) tmp.findViewById(R.id.Price);
-        price.setText(currentBike.Price +"");
+        //TextView price = (TextView) convertView.findViewById(R.id.Price);
+        holder.price.setText(currentBike.Price +"");
 
-        TextView description = (TextView) tmp.findViewById(R.id.Description);
-        description.setText(currentBike.Description);
+        //TextView description = (TextView) convertView.findViewById(R.id.Description);
+        holder.description.setText(currentBike.Description);
 
-        TextView model = (TextView) tmp.findViewById(R.id.Model);
-        model.setText(currentBike.Model);
+        //TextView model = (TextView) convertView.findViewById(R.id.Model);
+        holder.model.setText(currentBike.Model);
 
 
-        return tmp;
+        return convertView;
+    }
+
+    private static class ViewHolder{
+        public TextView price;
+        public TextView model;
+        public TextView description;
     }
 }

@@ -113,7 +113,7 @@ public class Activity_ListView extends AppCompatActivity {
 
         myTask = new DownloadTask(this);
 
-        myTask.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/pets/pets.json"));
+        myTask.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json"));
 
 
     }
