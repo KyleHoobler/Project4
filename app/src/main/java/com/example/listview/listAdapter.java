@@ -21,52 +21,38 @@ public class listAdapter extends ArrayAdapter<BikeData> {
 
 
     public listAdapter(Context context, List<BikeData> data ){
-        super(context, R.layout.listview_row_layout,data);
+        super(context, R.layout.listview_row_layout, data);
         this.context = context;
         this.myBikes = data;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
-        ViewHolder holder;
-
+    public View getView(int position, View counterView, ViewGroup parent){
         LayoutInflater inflater = LayoutInflater.from(context);
-        if(convertView == null){
-            convertView = inflater.inflate(R.layout.listview_row_layout,null);
-
-            holder = new ViewHolder();
-            holder.price = (TextView) convertView.findViewById(R.id.Price);
-            holder.description = (TextView) convertView.findViewById(R.id.Description);
-            holder.model = (TextView) convertView.findViewById(R.id.Model);
-
-            convertView.setTag(holder);
-        }
-
-        else{
-            holder = (ViewHolder) convertView.getTag();
+        View tmp = counterView;
+        if(tmp == null){
+            tmp = inflater.inflate(R.layout.listview_row_layout,parent,false);
         }
 
         BikeData currentBike = myBikes.get(position);
 
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView1);
-        ///Set the image
+        ImageView imageView = (ImageView) tmp.findViewById(R.id.imageView1);
+        //DownloadImageTask.execute();
 
-        //TextView price = (TextView) convertView.findViewById(R.id.Price);
-        holder.price.setText(currentBike.Price +"");
+        TextView price = (TextView) tmp.findViewById(R.id.Price);
+        price.setText(currentBike.Price + "");
 
-        //TextView description = (TextView) convertView.findViewById(R.id.Description);
-        holder.description.setText(currentBike.Description);
+        TextView description = (TextView) tmp.findViewById(R.id.Description);
+        description.setText(currentBike.Description);
 
-        //TextView model = (TextView) convertView.findViewById(R.id.Model);
-        holder.model.setText(currentBike.Model);
+        TextView model = (TextView) tmp.findViewById(R.id.Model);
+        model.setText(currentBike.Model);
 
 
-        return convertView;
+        return tmp;
     }
 
-    private static class ViewHolder{
-        public TextView price;
-        public TextView model;
-        public TextView description;
-    }
+
+
+
 }

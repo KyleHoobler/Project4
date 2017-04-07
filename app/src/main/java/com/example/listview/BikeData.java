@@ -37,6 +37,12 @@ public class BikeData {
         this.Description = b.Description;
         this.Link = b.Link;
     }
+    public String getCompany(){
+        return Company;
+    }
+    public String getLocation(){return Location;}
+    public Double getPrice(){return Price;}
+
 
     /**
      * @author lynn builder pattern, see page 11 Effective Java UserData mydata
@@ -89,9 +95,6 @@ public class BikeData {
             return this;
         }
 
-        public String getCompany(){
-            return Company;
-        }
 
         // use this to actually construct Bikedata
         // without fear of partial construction
@@ -99,4 +102,6 @@ public class BikeData {
             return new BikeData(this);
         }
     }
+
+
 }

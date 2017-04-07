@@ -21,6 +21,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Activity_ListView extends AppCompatActivity {
@@ -33,6 +34,7 @@ public class Activity_ListView extends AppCompatActivity {
 	ListView my_listview;
     String[] tmp;
     Integer[] imageid;
+    int position;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +45,8 @@ public class Activity_ListView extends AppCompatActivity {
         imageid = new Integer[5];
 
 
-
-
 		// Change title to indicate sort by
 		setTitle("Sort by:");
-
-
 
         myPreference = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -75,11 +73,13 @@ public class Activity_ListView extends AppCompatActivity {
 		setSupportActionBar(toolbar);
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
-		setupSimpleSpinner();
+
 
 		//set the listview onclick listener
         my_listview = (ListView)findViewById(R.id.lv);
         setupListViewOnClickListener();
+
+        setupSimpleSpinner();
 
 
 		//TODO call a thread to get the JSON list of bikes
@@ -184,17 +184,21 @@ public class Activity_ListView extends AppCompatActivity {
 	 */
 	private void setupSimpleSpinner() {
 
-        tmp = new String[] {"Company","Model", "Price", "Location"};
+        tmp = new String[] {"Company", "Price", "Location"};
         spinner = (Spinner)findViewById(R.id.spinner);
 
         spinner.setAdapter(new ArrayAdapter<String>(this, R.layout.spinner_item, tmp));
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                printValue("Hi Dad");
+
+                if (position == 1) {
+                    sortCompany(imList);
+                    printValue("grab wall");
+                }
             }
 
             @Override
@@ -222,6 +226,20 @@ public class Activity_ListView extends AppCompatActivity {
     public void refresh(){
         imList.removeAll(imList);
         runDownloadTask();
+        if(position == 0){
+            sortCompany(imList);
+        }
+
     }
 
+    public void sortCompany(List<BikeData> List){
+
+        Collections.sort(List, new ComparatorCompany());
+    }
+    public void sortPrice(List<BikeData> List){
+        Collections.sort(List, new ComparatorPrice());
+    }
+    public void sortLocation(List<BikeData> List){
+        Collections.sort(List, new ComparatorLocation());
+    }
 }
