@@ -14,6 +14,9 @@ public class BikeData {
     final String Model;
     final double Price;
     final String Location;
+    final String Date;
+    final String Description;
+    final String Link;
     //TODO make all BikeData fields final
 
     /* (non-Javadoc)
@@ -22,7 +25,8 @@ public class BikeData {
     @Override
     public String toString() {
 
-        return Model;
+
+        return "Company: " + Company + "\nModel: " + Model + "\nPrice: $" + Price + "\nLocation: " + Location + "\nDate Listed: " + Date + "\nDescription: " + Description + "\nLink: " + Link;
     }
 
     private BikeData(Builder b) {
@@ -30,6 +34,9 @@ public class BikeData {
         this.Model = b.Model;
         this.Price = b.Price;
         this.Location = b.Location;
+        this.Date = b.Date;
+        this.Description = b.Description;
+        this.Link = b.Link;
     }
 
     /**

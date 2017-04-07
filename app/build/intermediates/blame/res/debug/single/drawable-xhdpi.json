@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\abc_ic_clear_mtrl_alpha.png",
-        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\drawable-xhdpi\\abc_ic_clear_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\abc_ic_go_search_api_mtrl_alpha.png",
         "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\drawable-xhdpi\\abc_ic_go_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Kyle\\Desktop\\craiglist\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\abc_ic_clear_mtrl_alpha.png",
+        "source": "C:\\Users\\Kyle\\.android\\build-cache\\3c4a60d1e1f0ea3d57ff3e55d768077d8ca842b1\\output\\res\\drawable-xhdpi\\abc_ic_clear_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\taylo\\AndroidStudioProjects\\Project4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\abc_list_longpressed_holo.9.png",
