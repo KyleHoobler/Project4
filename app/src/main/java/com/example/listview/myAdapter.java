@@ -21,7 +21,6 @@ public class myAdapter extends ArrayAdapter<String> {
     private static LayoutInflater inflater = null;
 
 
-
     public myAdapter(Activity context, String[] data, Integer[] imageid){
         super(context, R.layout.listview_row_layout, data);
         this.context = context;

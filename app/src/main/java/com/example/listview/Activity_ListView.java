@@ -99,6 +99,7 @@ public class Activity_ListView extends AppCompatActivity {
 
     }
 
+
     public void runDownloadTask(){
         if(myTask != null){
             myTask.detach();
@@ -138,8 +139,10 @@ public class Activity_ListView extends AppCompatActivity {
 	 * @param JSONString  complete string of all bikes
 	 */
 	private void bindData(String JSONString) {
-
+        ListView listView = (ListView)findViewById(R.id.lv);
+        ArrayAdapter<BikeData> adapter = new listAdapter(this,imList);
 	}
+
 
 	Spinner spinner;
 	/**
