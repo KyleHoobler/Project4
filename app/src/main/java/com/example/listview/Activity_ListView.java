@@ -34,7 +34,7 @@ public class Activity_ListView extends AppCompatActivity {
 	ListView my_listview;
     String[] tmp;
     Integer[] imageid;
-    int position;
+   private int position;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -195,20 +195,27 @@ public class Activity_ListView extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if (position == 1) {
-                    sortCompany(imList);
-                    printValue("grab wall");
+                Activity_ListView.this.setPosition(position);
+                if(imList != null) {
+                    refresh();
                 }
+
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+
             }
         });
 
 
+
 	}
+
+    public void setPosition(int position){
+        this.position = position;
+    }
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -218,6 +225,18 @@ public class Activity_ListView extends AppCompatActivity {
     public void setList(List<BikeData> list){
         imList = new ArrayList<BikeData>();
         imList.addAll(list);
+
+        if(position == 0){
+            sortCompany(imList);
+
+        }
+        else if(position == 1){
+            sortPrice(imList);
+        }
+        else{
+            sortLocation(imList);
+        }
+
         //for(int i = 0; i < imList.size(); i++){
          // Toast.makeText( this, imList.get(i) + "",Toast.LENGTH_SHORT).show();
        // }
@@ -226,15 +245,14 @@ public class Activity_ListView extends AppCompatActivity {
     public void refresh(){
         imList.removeAll(imList);
         runDownloadTask();
-        if(position == 0){
-            sortCompany(imList);
-        }
+
 
     }
 
     public void sortCompany(List<BikeData> List){
 
         Collections.sort(List, new ComparatorCompany());
+
     }
     public void sortPrice(List<BikeData> List){
         Collections.sort(List, new ComparatorPrice());
