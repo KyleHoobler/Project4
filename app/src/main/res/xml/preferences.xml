@@ -2,11 +2,11 @@
 
     <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
         <ListPreference android:title="Info"
-            android:key ="listpref"
+            android:key ="options"
             android:summary="Select which site to get JSON data from"
-            android:defaultValue="http://www.tetonsoftware.com/bikes/bikes.json"
-            android:entries="@array/webOptions"
-            android:entryValues="@array/values">
+            android:entries="@array/JSON_URL_NAME"
+            android:entryValues="@array/JSON_URL"
+            android:defaultValue="http://www.pcs.cnu.edu/~kperkins/bikes/">
         </ListPreference>
 
 </PreferenceScreen>

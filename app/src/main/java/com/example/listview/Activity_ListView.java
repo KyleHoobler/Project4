@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.ListPreference;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -35,13 +36,14 @@ public class Activity_ListView extends AppCompatActivity {
     String[] tmp;
     Integer[] imageid;
    private int position;
+    private final String JSON_EXTENSION = "bikes.json";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-
+        PreferenceManager.setDefaultValues(this,R.xml.preferences,false);
         imageid = new Integer[5];
 
 
@@ -53,16 +55,18 @@ public class Activity_ListView extends AppCompatActivity {
         //On Update prefrences
         listener = new SharedPreferences.OnSharedPreferenceChangeListener(){
             public void onSharedPreferenceChanged(SharedPreferences prefs, String key){
-                if(key.equals("listpref")){
-
-
+                if(key.equals("options")){
+                    Toast.makeText(Activity_ListView.this,"Succes", Toast.LENGTH_SHORT).show();
+                    refresh();
                 }
             }
         };
         //updates when prefrences change
         myPreference.registerOnSharedPreferenceChangeListener(listener);
 
-        checkConnection();
+
+        /////////////////////////myPreference.getString(getString(R.string.tetonURL),"http://www.tetonsoftware.com/bikes/")
+
 
 		//listview that you will operate on
 		//my_listview = (ListView)findViewById(R.id.lv);
@@ -80,6 +84,8 @@ public class Activity_ListView extends AppCompatActivity {
         setupListViewOnClickListener();
 
         setupSimpleSpinner();
+
+        checkConnection();
 
 
 		//TODO call a thread to get the JSON list of bikes
@@ -104,7 +110,10 @@ public class Activity_ListView extends AppCompatActivity {
 
     }
 
+    public String getLink(){
 
+        return  myPreference.getString("options","http://www.pcs.cnu.edu/~kperkins/bikes/");
+    }
     public void runDownloadTask(){
         if(myTask != null){
             myTask.detach();
@@ -113,7 +122,7 @@ public class Activity_ListView extends AppCompatActivity {
 
         myTask = new DownloadTask(this);
 
-        myTask.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json"));
+        myTask.execute(getLink() + JSON_EXTENSION);
 
 
     }
@@ -168,7 +177,7 @@ public class Activity_ListView extends AppCompatActivity {
 	public void bindData(String JSONString) {
         setList(JSONHelper.parseAll(JSONString));
         ListView listView = (ListView)findViewById(R.id.lv);
-        ArrayAdapter<BikeData> adapter = new listAdapter(this,imList);
+        ArrayAdapter<BikeData> adapter = new listAdapter(this,imList,getLink());
         listView.setAdapter(adapter);
 	}
 
@@ -197,7 +206,7 @@ public class Activity_ListView extends AppCompatActivity {
 
                 Activity_ListView.this.setPosition(position);
                 if(imList != null) {
-                    refresh();
+                    runDownloadTask();
                 }
 
             }
@@ -243,8 +252,10 @@ public class Activity_ListView extends AppCompatActivity {
     }
 
     public void refresh(){
+        spinner.setSelection(0);
         imList.removeAll(imList);
         runDownloadTask();
+
 
 
     }

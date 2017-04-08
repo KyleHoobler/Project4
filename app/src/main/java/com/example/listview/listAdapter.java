@@ -2,6 +2,8 @@ package com.example.listview;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,16 +22,18 @@ public class listAdapter extends ArrayAdapter<BikeData> {
 
     Context context;
     List<BikeData> myBikes;
+    String link;
     //SharedPreferences imagePref = PreferenceManager.getDefaultSharedPreferences(context);
     //String URL = imagePref.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json");
 
 
 
 
-    public listAdapter(Context context, List<BikeData> data ){
+    public listAdapter(Context context, List<BikeData> data, String link ){
         super(context, R.layout.listview_row_layout, data);
         this.context = context;
         this.myBikes = data;
+        this.link = link;
     }
 
     @Override
@@ -41,6 +45,7 @@ public class listAdapter extends ArrayAdapter<BikeData> {
             convertView = inflater.inflate(R.layout.listview_row_layout,null);
 
             holder = new ViewHolder();
+            holder.image =(ImageView) convertView.findViewById(R.id.imageView1);
             holder.price = (TextView) convertView.findViewById(R.id.Price);
             holder.description = (TextView) convertView.findViewById(R.id.Description);
             holder.model = (TextView) convertView.findViewById(R.id.Model);
@@ -54,10 +59,9 @@ public class listAdapter extends ArrayAdapter<BikeData> {
 
         BikeData currentBike = myBikes.get(position);
 
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView1);
-        DownloadImageTask dlImage = new DownloadImageTask("http://www.tetonsoftware.com/bikes", imageView);
-        dlImage.execute("http://www.tetonsoftware.com/bikes/" + currentBike.picture);
-
+//        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView1);
+        DownloadImageTask dlImage = new DownloadImageTask("", holder.image);
+        dlImage.execute(link + currentBike.picture);
 
 
         //TextView price = (TextView) tmp.findViewById(R.id.Price);
@@ -74,11 +78,13 @@ public class listAdapter extends ArrayAdapter<BikeData> {
     }
 
 
-    private static class ViewHolder{
+    public static class ViewHolder{
+        public ImageView image;
         public TextView price;
         public TextView model;
         public TextView description;
     }
+
 
 
 
