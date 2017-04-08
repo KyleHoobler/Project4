@@ -44,6 +44,7 @@ public class BikeData {
     }
     public String getLocation(){return Location;}
     public Double getPrice(){return Price;}
+    public String getModel(){return Model;}
 
 
     /**

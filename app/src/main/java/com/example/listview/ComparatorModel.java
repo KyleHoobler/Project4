@@ -9,6 +9,6 @@ import java.util.Comparator;
 public class ComparatorModel implements Comparator<BikeData> {
         @Override
         public int compare(BikeData c1, BikeData c2) {
-            return c1.getLocation().compareTo(c2.getLocation());
+            return c1.getModel().compareTo(c2.getModel());
         }
 }

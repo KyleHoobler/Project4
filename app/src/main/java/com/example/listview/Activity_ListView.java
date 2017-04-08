@@ -193,7 +193,7 @@ public class Activity_ListView extends AppCompatActivity {
 	 */
 	private void setupSimpleSpinner() {
 
-        tmp = new String[] {"Company", "Price", "Location"};
+        tmp = new String[] {"Company", "Price", "Location", "Model"};
         spinner = (Spinner)findViewById(R.id.spinner);
 
         spinner.setAdapter(new ArrayAdapter<String>(this, R.layout.spinner_item, tmp));
@@ -242,8 +242,11 @@ public class Activity_ListView extends AppCompatActivity {
         else if(position == 1){
             sortPrice(imList);
         }
-        else{
+        else if(position == 2){
             sortLocation(imList);
+        }
+        else{
+            sortModel(imList);
         }
 
         //for(int i = 0; i < imList.size(); i++){
@@ -270,5 +273,9 @@ public class Activity_ListView extends AppCompatActivity {
     }
     public void sortLocation(List<BikeData> List){
         Collections.sort(List, new ComparatorLocation());
+    }
+
+    public void sortModel(List<BikeData> List){
+        Collections.sort(List, new ComparatorModel());
     }
 }
