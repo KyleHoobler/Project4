@@ -2,6 +2,7 @@ package com.example.listview;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +20,8 @@ public class listAdapter extends ArrayAdapter<BikeData> {
 
     Context context;
     List<BikeData> myBikes;
-    SharedPreferences imagePref;
-   // String URL = imagePref.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json");
+    //SharedPreferences imagePref = PreferenceManager.getDefaultSharedPreferences(context);
+    //String URL = imagePref.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json");
 
 
 
@@ -54,8 +55,8 @@ public class listAdapter extends ArrayAdapter<BikeData> {
         BikeData currentBike = myBikes.get(position);
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView1);
-        DownloadImageTask dlImage = new DownloadImageTask(currentBike.Link, imageView);
-        //dlImage.execute(URL += "/" + currentBike.picture);
+        DownloadImageTask dlImage = new DownloadImageTask("http://www.tetonsoftware.com/bikes", imageView);
+        dlImage.execute("http://www.tetonsoftware.com/bikes/" + currentBike.picture);
 
 
 

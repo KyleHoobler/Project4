@@ -23,7 +23,7 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
     // 1 second
     private static final int TIMEOUT = 1000;
     private String myQuery = "";
-    String myURL;
+    public static String myURL;
     int statusCode = 0;
     public static String rawJSON;
 
